@@ -1,0 +1,134 @@
+.cloud {
+  position: fixed;
+  top: 0.2vh;
+  left: 1vh;
+}
+
+.one {
+  position: relative;
+}
+
+.layer_x {
+  width: 5vh;
+  height: 10vw;
+  border: 1vh double rgb(205, 77, 30);
+  background-clip: content-box;
+  border-radius: 8em 198em 8em;
+  transform: rotateZ(80deg);
+  position: absolute;
+}
+
+#layer_a,
+#layer_d,
+#layer_e {
+  left: 15vh;
+}
+
+#layer_b,
+#layer_f {
+  left: 20vh;
+}
+
+#layer_c {
+  left: 10vh;
+}
+
+#layer_a,
+#layer_b {
+  top: 1vh;
+}
+
+#layer_c,
+#layer_d {
+  top: 10vh;
+}
+
+#layer_e,
+#layer_f {
+  top: 17.3vh;
+}
+
+.cloud_one {
+  top: -4vh;
+  left: -2vh;
+  animation: cloud_animation_1 600ms linear infinite alternate;
+}
+
+.cloud_two {
+  left: 33vh;
+  top: 3vh;
+  animation: cloud_animation_2 700ms linear infinite alternate;
+}
+
+.cloud_three {
+  left: 63vh;
+  top: -4vh;
+  animation: cloud_animation_1 1s linear infinite alternate;
+}
+
+.cloud_four {
+  left: 95vh;
+  top: 3vh;
+  animation: cloud_animation_2 800ms linear infinite alternate;
+}
+
+.cloud_five {
+  left: 126vh;
+  top: -4vh;
+  animation: cloud_animation_1 1s linear infinite alternate;
+  scale: 1.2;
+}
+
+@keyframes cloud_animation_1 {
+  100% {
+    transform: rotate(-3deg);
+    scale: 0.98;
+  }
+}
+
+@keyframes cloud_animation_2 {
+  100% {
+    transform: rotate(4deg);
+    scale: 0.96;
+  }
+}
+
+.layerAAA, .layerBBB, .layerCCC {
+    animation: backgroundChange_AAA 800ms ease-in-out infinite alternate;
+
+    background-color: rgb(138, 192, 240);
+
+    background-image: repeating-linear-gradient(225deg, 
+    rgba(0, 21, 255, 0.64) 0% 3%, 
+    rgb(242, 0, 255, 0.4) 3% 6%, 
+    rgba(0, 170, 255, 0.6) 6% 9%), 
+    repeating-linear-gradient(-225deg,
+    rgb(255, 0, 0, 0.8) 0% 3%, 
+    rgb(255, 221, 0, 0.8) 3% 6%, 
+    rgb(255, 0, 106, 0.8) 6% 9%);
+    
+    background-size: 40vw 30vw;
+    animation: backgroundChange_AAA 5s ease-in-out infinite alternate forwards;
+}        
+
+@keyframes backgroundChange_AAA {
+      from{
+          background-position: 0% 0%;
+      }
+
+      250%{
+          background-position: 100% 100%;
+      }
+
+      50%{
+          background-color: 100% 0%;
+      }
+
+      75%{
+          background-color: 0% 100%;
+      }
+
+      to{
+          background-position: 50% 50%;
+      }
+}
